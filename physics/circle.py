@@ -1,4 +1,4 @@
-from pysics.game_object import GameObject
+from physics.game_object import GameObject
 import pygame
 
 class Circle(GameObject):

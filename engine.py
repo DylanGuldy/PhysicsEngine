@@ -1,5 +1,5 @@
 import pygame
-from pysics.circle import Circle
+from physics.circle import Circle
 
 class Game:
   def __init__(self, window_width=800, window_height=600):
