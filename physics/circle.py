@@ -1,4 +1,5 @@
 from physics.game_object import GameObject
+from utils.utils import draw_text
 import pygame
 
 class Circle(GameObject):
@@ -15,8 +16,6 @@ class Circle(GameObject):
     self.pixel_width = pixel_width
 
   def draw(self, surface:pygame.surface):
-    pygame.draw.circle(surface, (0x55, 0x55, 0x55), (self.position.x,  self.position.y), self.radius*2, self.pixel_width)
-    text_font = pygame.font.Font(None, 18)
-    text = text_font.render(f"{self.position.x},{self.position.y}", True, (255,255,255))
-    surface.blit(text, (self.position.x+self.radius+20, self.position.y-self.radius/2))
+    pygame.draw.circle(surface, (0x55, 0x55, 0x55), (self.position.x,  self.position.y), self.radius, self.pixel_width)
+    draw_text(f"{self.position.x},{self.position.y}",18, self.position.x+self.radius+20, self.position.y-self.radius/2, surface)
     
