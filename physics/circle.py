@@ -17,5 +17,5 @@ class Circle(GameObject):
 
   def draw(self, surface:pygame.surface):
     pygame.draw.circle(surface, (0x55, 0x55, 0x55), (self.position.x,  self.position.y), self.radius, self.pixel_width)
-    draw_text(f"{self.position.x},{self.position.y}",18, self.position.x+self.radius+20, self.position.y-self.radius/2, surface)
+    #draw_text(f"{self.position.x},{self.position.y}",18, self.position.x+self.radius+20, self.position.y-self.radius/2, surface)
     
